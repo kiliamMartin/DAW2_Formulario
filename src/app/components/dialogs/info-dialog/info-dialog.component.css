@@ -1,0 +1,36 @@
+.info-dialog{
+    padding: 60px;
+    text-align: left;
+
+}
+
+label{
+
+    text-align: left;
+    font-size: large;
+}
+
+label b {
+    margin-right: 6px;
+    font-size: large;
+    text-align: left;
+}
+
+.dialog{
+    padding: 20px;
+    margin: 0 auto;
+}
+
+
+
+h1{
+    margin-bottom: 50px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.button-container{
+    justify-content: center;
+    width: 100%;
+  
+}

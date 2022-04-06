@@ -13,12 +13,20 @@ import {MatTableModule} from '@angular/material/table';
 import {MatTooltipModule} from '@angular/material/tooltip'; 
 import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input'; 
+import {MatDialogModule} from '@angular/material/dialog';
+import { DeleteDialogComponent } from './components/dialogs/delete-dialog/delete-dialog.component'; 
+import { MatButtonModule } from '@angular/material/button';
+import { EditDialogComponent } from './components/dialogs/edit-dialog/edit-dialog.component';
+import { InfoDialogComponent } from './components/dialogs/info-dialog/info-dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    NavbarComponent
+    NavbarComponent,
+    DeleteDialogComponent,
+    EditDialogComponent,
+    InfoDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +38,9 @@ import {MatInputModule} from '@angular/material/input';
     MatIconModule,
     MatTableModule,
     MatTooltipModule,
-    MatInputModule
+    MatInputModule,
+    MatDialogModule,
+    MatButtonModule
    
     
   ],
