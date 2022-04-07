@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatTableDataSource } from '@angular/material/table';
-//import { MatTableDataSource } from '@angular/material/table';
 import { Car } from 'src/app/interfaces/car';
 import { CarService } from 'src/app/services/car.service';
 import { DeleteDialogComponent } from '../dialogs/delete-dialog/delete-dialog.component';
@@ -17,8 +16,11 @@ import { InfoDialogComponent } from '../dialogs/info-dialog/info-dialog.componen
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-  private carList: Car [];
+  @ViewChild(InfoDialogComponent) child: any;
 
+
+  private carList: Car [];
+  
 
 
   displayedColumns: string[] = ['id', 'make', 'model', 'year', 'VIN', 'actions'];
@@ -39,7 +41,7 @@ export class DashboardComponent implements OnInit {
     myCompDialog.afterClosed().subscribe((result) => {
       switch (result) {
         case 'close':
-          console.log('Close');
+          console.log('close');
           break 
         case "delete":
           console.log("delete")
@@ -55,9 +57,19 @@ export class DashboardComponent implements OnInit {
     });
   }
 
-  openInfoDialog() {
-    this.dialog.open(InfoDialogComponent);
-    
+
+  openInfoDialog(id:string,make:string,model:string,year:number,VIN:string) {
+    this.dialog.open(InfoDialogComponent, {
+      data: 
+      {
+        id: id, 
+        make: make,
+        model: model,
+        year: year,
+        VIN: VIN
+      },  
+      
+    });
       
     
   }

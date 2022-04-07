@@ -1,22 +1,20 @@
 <div class="info-dialog">
     <div class="dialog">
-    <h1 mat-dialog-title>Car Information</h1>
-    <mat-dialog-content>
-        <label for=""><b>Id: </b></label>
-        <label for="">231253456454654</label><br><br>
-        <label for=""><b>Make: </b></label>
-        <label for="">231253456454654</label><br><br>
-        <label for=""><b>Brand: </b></label>
-        <label for="">231253456454654</label><br><br>
-        <label for=""><b>Model: </b></label>
-        <label for="">231253456454654</label><br><br>
-        <label for=""><b>Year: </b></label>
-        <label for="">231253456454654</label><br><br>
-        <label for=""><b>VIN: </b></label>
-        <label for="">231253456454654</label><br><br>
-    </mat-dialog-content>
-    <div mat-dialog-actions class="button-container">
-        <button mat-button mat-dialog-close style="background-color: #673ab7; color: white;">Close</button>
-    </div>
+        <h1 mat-dialog-title>Car Information</h1>
+        <mat-dialog-content>
+            <label for=""><b>Id: </b></label>
+            <label for="">{{data.id}}</label><br><br>
+            <label for=""><b>Make: </b></label>
+            <label for="">{{data.make}}</label><br><br>
+            <label for=""><b>Model: </b></label>
+            <label for="">{{data.model}}</label><br><br>
+            <label for=""><b>Year: </b></label>
+            <label for="">{{data.year}}</label><br><br>
+            <label for=""><b>VIN: </b></label>
+            <label for="">{{data.VIN}}</label><br><br>
+        </mat-dialog-content>
+        <div mat-dialog-actions class="button-container">
+            <button mat-button mat-dialog-close style="background-color: #673ab7; color: white;">Close</button>
+        </div>
     </div>
 </div>

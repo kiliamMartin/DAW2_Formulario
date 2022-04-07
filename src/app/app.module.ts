@@ -18,6 +18,7 @@ import { DeleteDialogComponent } from './components/dialogs/delete-dialog/delete
 import { MatButtonModule } from '@angular/material/button';
 import { EditDialogComponent } from './components/dialogs/edit-dialog/edit-dialog.component';
 import { InfoDialogComponent } from './components/dialogs/info-dialog/info-dialog.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { InfoDialogComponent } from './components/dialogs/info-dialog/info-dialo
     MatTooltipModule,
     MatInputModule,
     MatDialogModule,
-    MatButtonModule
+    MatButtonModule,
+    FormsModule
    
     
   ],

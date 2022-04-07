@@ -39,7 +39,7 @@
             <th mat-header-cell *matHeaderCellDef> </th>
             <td mat-cell *matCellDef="let element" style="text-align: right;"> 
                 <a class="pointer" style="color: #673AB7" matTooltip="Car information">
-                    <mat-icon (click)="openInfoDialog()">info</mat-icon>
+                    <mat-icon (click)="openInfoDialog(element.id, element.make, element.model,element.year,element.VIN)">info</mat-icon>
                 </a>
                 <a class="pointer" matTooltip="Edit Car" >
                     <mat-icon>edit</mat-icon>
