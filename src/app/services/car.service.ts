@@ -115,14 +115,27 @@ export class CarService {
   }
 
   deleteCar(id:string){
-    console.log(this.CarsList.slice().length)
+    if(this.findCar(id) != -1){
+      this.CarsList.splice(this.findCar(id),1)
+    }
+  }
+
+  editCar(id:string,make:string, model:string, year:number, VIN:string){
+    const position = this.findCar(id)
+    if(position != -1){
+      this.CarsList.slice()[position].make = make
+      this.CarsList.slice()[position].model = model
+      this.CarsList.slice()[position].year = year
+      this.CarsList.slice()[position].VIN = VIN
+    }
+  }
+
+  private findCar(id:string):number{
     for (let index = 0; index < this.CarsList.slice().length; index++) {
       if (this.CarsList.slice()[index].id === id){
-          this.CarsList.splice(index,1)
-          console.log("works")
-          console.log(this.CarsList.slice().length)
+        return index
       }
-      
     }
+    return -1
   }
 }

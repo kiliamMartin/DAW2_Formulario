@@ -4,6 +4,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { Car } from 'src/app/interfaces/car';
 import { CarService } from 'src/app/services/car.service';
 import { DeleteDialogComponent } from '../dialogs/delete-dialog/delete-dialog.component';
+import { EditDialogComponent } from '../dialogs/edit-dialog/edit-dialog.component';
 import { InfoDialogComponent } from '../dialogs/info-dialog/info-dialog.component';
 
 
@@ -57,6 +58,27 @@ export class DashboardComponent implements OnInit {
     });
   }
 
+  openEditDialog(id:string,make:string,model:string,year:number,VIN:string){
+    const myCompDialog = this.dialog.open(EditDialogComponent, {
+      data: 
+      {
+        id: id, 
+        make: make,
+        model: model,
+        year: year,
+        VIN: VIN
+      },  
+      
+    });
+    myCompDialog.afterClosed().subscribe((result) => {
+      console.log(result)
+      if(result === "cancel"){
+        return;
+      }
+      this.editCar(id,result.make, result.model, result.year, result.VIN)
+    });
+  }
+
 
   openInfoDialog(id:string,make:string,model:string,year:number,VIN:string) {
     this.dialog.open(InfoDialogComponent, {
@@ -72,6 +94,11 @@ export class DashboardComponent implements OnInit {
     });
       
     
+  }
+
+  editCar(id:string, make:string, model:string, year:number, VIN:string){
+      this.carService.editCar(id, make, model, year, VIN)
+      this.loadCars()
   }
   
   loadCars(){

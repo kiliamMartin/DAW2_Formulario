@@ -42,7 +42,7 @@
                     <mat-icon (click)="openInfoDialog(element.id, element.make, element.model,element.year,element.VIN)">info</mat-icon>
                 </a>
                 <a class="pointer" matTooltip="Edit Car" >
-                    <mat-icon>edit</mat-icon>
+                    <mat-icon (click)="openEditDialog(element.id, element.make, element.model,element.year,element.VIN)">edit</mat-icon>
                 </a>
                 <a class="pointer" style="color: red;" matTooltip="Delete Car">
                     <mat-icon (click)="openDeleteDialog(element.id)">delete</mat-icon>
