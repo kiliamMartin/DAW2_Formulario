@@ -5,7 +5,19 @@ table {
 .filter{
     margin-top: 1rem;
 }
+.filter-button-container{
+    display: flex;
+    margin: auto 0;
+    
+    justify-content: center;
+    width: 100%;
+}
 
+.filter-button-container button{
+    height: 40px;
+    margin-top: 1.9rem;
+    margin-left: 2rem;
+}
 .container{
     margin: 0 auto;
     width: 70%;
@@ -13,7 +25,7 @@ table {
 }
 
 th{
-    width: 17%;
+    width: 15%;
 }
 
 .pointer{

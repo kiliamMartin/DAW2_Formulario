@@ -7,7 +7,7 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
   styleUrls: ['./edit-dialog.component.css']
 })
 export class EditDialogComponent implements OnInit {
-  make=this.data.make
+  
 
   constructor(@Inject(MAT_DIALOG_DATA) public data: {id:string,make:string,model:string,year:number,VIN:string}) { }
 

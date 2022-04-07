@@ -130,6 +130,11 @@ export class CarService {
     }
   }
 
+  addCar(make:string, model:string, year:number, VIN:string){
+    const newCar : Car = {id:nanoid(),make:make,model:model,year:year,VIN:VIN}
+    this.CarsList.unshift(newCar)
+  }
+
   private findCar(id:string):number{
     for (let index = 0; index < this.CarsList.slice().length; index++) {
       if (this.CarsList.slice()[index].id === id){

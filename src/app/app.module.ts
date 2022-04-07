@@ -19,6 +19,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { EditDialogComponent } from './components/dialogs/edit-dialog/edit-dialog.component';
 import { InfoDialogComponent } from './components/dialogs/info-dialog/info-dialog.component';
 import { FormsModule } from '@angular/forms';
+import { AddCarDialogComponent } from './components/dialogs/add-car-dialog/add-car-dialog.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { FormsModule } from '@angular/forms';
     NavbarComponent,
     DeleteDialogComponent,
     EditDialogComponent,
-    InfoDialogComponent
+    InfoDialogComponent,
+    AddCarDialogComponent
   ],
   imports: [
     BrowserModule,
