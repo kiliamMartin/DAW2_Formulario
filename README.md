@@ -1,27 +1,24 @@
 # Formulario
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
+En este proyecto se ha realizado un CRUD básico sobre un listado de coches. Dichos coches se muestran en forma de tabla. Los coches, los cuales son un array de objetos, se cargan mediante un servicio. Además de permitir las funcionalidades de un CRUD, se pueden filtrar por nombre, id, modelo, año, marca o VIN.
 
-## Development server
+## Despliegue del proyecto
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Para el despliegue del proyecto se ha utilizado Vercel. [Enlace](https://daw-2-formulario-1fvzfae8a-kiliammartin.vercel.app/)
 
-## Code scaffolding
+## Antes de ejecutar el proyecto
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1). Instalar npm `npm install -g npm` y [Node.js 16.14.2 LTS](https://nodejs.org/es/download/)
 
-## Build
+2). Instalar Angular CLI `npm install -g @angular/cli`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Ejecutar el proyecto
 
-## Running unit tests
+1). Entrar en la carpeta del proyecto
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1). Ejecutar `npm install`
 
-## Running end-to-end tests
+2). Por último arrancar el servidor `ng serve --open`
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
